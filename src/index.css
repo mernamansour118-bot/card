@@ -1,0 +1,122 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+}
+/* Products Container */
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+/* Product Card */
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+/* Product Image */
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+/* Product Information */
+.product-info {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.product-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.product-info p {
+    color: #777;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+.product-info h3 {
+    color: #16a34a;
+    font-size: 24px;
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+/* Buttons Container */
+.card-actions {
+    display: flex;
+    gap: 10px;
+}
+/* Add To Cart */
+.add-to-cart {
+    flex: 1;
+    padding: 12px 8px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #0b5ed7;
+}
+/* Favorite Button */
+.favorite {
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    color: #0d6efd;
+    border: 1px solid #0d6efd;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.favorite svg {
+    width: 25px;
+    height: 25px;
+}
+.favorite:hover {
+    background-color: #eff6ff;
+}
+/* Responsive Design */
+
+@media (max-width: 1000px) {
+
+    .products-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+@media (max-width: 550px) {
+
+    .products-container {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+}
